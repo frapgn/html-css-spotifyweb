@@ -27,15 +27,21 @@ body {
     font-weight: 400;
 }
 
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
 /* NAVBAR */
 nav {
     background-color: #000;
     color: #b3b3b3;
     display: flex;
+    flex: 0 0 50px;
     flex-direction: column;
     justify-content: space-between;
-    float: left;
-    height: 100vh; /* ??? */
+    /* float: left; */
+    height: calc(100% - 90px); /* ??? */
     font-weight: 600;
 }
 
@@ -179,6 +185,33 @@ nav a:hover {
     font-size: 30px;
     margin-right: 10px;
 }
+
+/* TOP BAR */
+.top-bar {
+    height: 50px;
+    float: left;
+    flex: 1 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* MAIN */
+main {
+    background-color: rgb(64, 48, 105);
+    height: 100%;
+
+}
+
+/* PLAYER BAR */
+.player-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    background-color: #282828;
+}
+
+
 /* up to Smartphone Large */
 @media screen and (max-width: 425px) {
 
@@ -197,7 +230,7 @@ nav a:hover {
     nav {
         align-items: flex-start;
         padding: 20px;
-        width: 200px;
+        flex-basis: 230px;
     }
 
     .nav-header {
