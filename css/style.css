@@ -30,6 +30,7 @@ body {
 /* NAVBAR */
 nav {
     background-color: #000;
+    color: #b3b3b3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,7 +45,7 @@ nav {
 }
 
 .logo-big {
-    padding: 20px;
+
 }
 
 .logo-small img{
@@ -54,23 +55,25 @@ nav {
 .logo-big svg {
     height: 30px;
     color: #fff;
+    margin-bottom: 20px;
 }
 
 /* buttons */
 .nav-btns-container {
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
 }
 
 .nav-btns-container a {
     text-decoration: none;
-    color: #fff;
+    color: #b3b3b3;
 }
 
 .nav-btn {
     display: flex;
     align-items: center;
-    margin: 5px 10px;
+    margin: 5px 0;
 }
 
 .nav-icon {
@@ -78,6 +81,19 @@ nav {
     width: 24px;
 }
 
+/* navbar playlist */
+.playlist-label {
+    font-size: 14px;
+    color: #fff;
+}
+
+
+/* navbar footer */
+.nav-footer {
+    align-self: flex-end;
+}
+
+/* up to Smartphone Large */
 @media screen and (max-width: 425px) {
 
     .logo-big {
@@ -89,22 +105,33 @@ nav {
     }
 }
 
+/* Tablet and Computer */
 @media screen and (min-width: 426px) {
 
+    /* navbar */
+    nav {
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    /* logo */
     .logo-small {
         display: none;
     }
 
-    nav {
-        align-items: flex-start;
-    }
-
+    /* navbar buttons */
     .nav-icon {
         margin-right: 10px;
     }
 
-    .nav-btn {
-        margin-left: 20px;
+    .nav-icon-text {
+        font-size: 14px;
+    }
+
+    /* navbar playlist */
+    .btn-create-playlist {
+        display: flex;
+
     }
 }
 
