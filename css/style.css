@@ -39,6 +39,14 @@ nav {
     font-weight: 600;
 }
 
+nav a {
+    transition: 0.2s linear;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
 /* logo */
 .logo-small {
     padding: 10px;
@@ -81,13 +89,49 @@ nav {
     width: 24px;
 }
 
+.nav-icon-text {
+    font-size: 15px;
+}
+
 /* navbar playlist */
+.nav-playlist-container a {
+    text-decoration: none;
+    color: #b3b3b3;
+}
+
 .playlist-label {
     font-size: 14px;
     color: #fff;
+    margin-bottom: 10px;
 }
 
+.btn-create-playlist {
+    display: flex;
+    align-items: center;
+}
 
+.btn-create-playlist:hover .square-playlist {
+    background-color: #fff;
+}
+
+.square-playlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-color: #b3b3b3;
+    transition: 0.2s linear;
+}
+
+.square-playlist .fa-plus {
+    color: #000;
+}
+
+.create-playlist-text {
+    font-size: 15px;
+}
 /* navbar footer */
 .nav-footer {
     align-self: flex-end;
@@ -124,15 +168,6 @@ nav {
         margin-right: 10px;
     }
 
-    .nav-icon-text {
-        font-size: 14px;
-    }
-
-    /* navbar playlist */
-    .btn-create-playlist {
-        display: flex;
-
-    }
 }
 
 /* @media screen and (min-width: 769px) {
