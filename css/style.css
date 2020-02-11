@@ -33,9 +33,9 @@ nav {
     color: #b3b3b3;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
     float: left;
-    max-width: 200px;
+    height: 100vh; /* ??? */
     font-weight: 600;
 }
 
@@ -45,6 +45,13 @@ nav a {
 
 nav a:hover {
     color: #fff;
+}
+
+/* nav header */
+.nav-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* logo */
@@ -132,19 +139,53 @@ nav a:hover {
 .create-playlist-text {
     font-size: 15px;
 }
+
 /* navbar footer */
 .nav-footer {
-    align-self: flex-end;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
+.nav-footer a {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+.btn-download-app {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px 0 10px;
+    border-bottom: 1px solid #b3b3b3;
+}
+
+.btn-download-app .fa-arrow-circle-down {
+    margin-right: 10px;
+}
+
+.text-download-app {
+    font-size: 13px;
+}
+
+.btn-user-profile {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.btn-user-profile .fa-user-circle {
+    font-size: 30px;
+    margin-right: 10px;
+}
 /* up to Smartphone Large */
 @media screen and (max-width: 425px) {
 
-    .logo-big {
-        display: none;
-    }
-
-    .nav-icon-text {
+    .logo-big,
+    .nav-icon-text,
+    .nav-playlist-container,
+    .nav-footer {
         display: none;
     }
 }
@@ -156,8 +197,12 @@ nav a:hover {
     nav {
         align-items: flex-start;
         padding: 20px;
+        width: 200px;
     }
 
+    .nav-header {
+        align-items: flex-start;
+    }
     /* logo */
     .logo-small {
         display: none;
