@@ -10,41 +10,107 @@
     clear: both;
 }
 
+@font-face {
+    font-family: Gotham;
+    src: url('../fonts/GothamLight.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Gotham;
+    src: url('../fonts/GothamMedium.ttf');
+    font-weight: 600;
+}
+
+body {
+    font-family: Gotham;
+    font-weight: 400;
+}
+
+/* NAVBAR */
 nav {
     background-color: #000;
     display: flex;
     flex-direction: column;
+    align-items: center;
     float: left;
-    /* max-width: 200px; */
-    padding:
+    max-width: 200px;
+    font-weight: 600;
 }
 
+/* logo */
 .logo-small {
     padding: 10px;
 }
 
 .logo-big {
-    padding: 20px 80px 20px 20px;
+    padding: 20px;
 }
 
 .logo-small img{
-    height: 40px;
+    height: 30px;
 }
 
-.logo-big-svg {
-    height: 40px;
+.logo-big svg {
+    height: 30px;
     color: #fff;
 }
 
-@media screen and (max-width: 320px) {
+/* buttons */
+.nav-btns-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-btns-container a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    margin: 5px 10px;
+}
+
+.nav-icon {
+    height: 24px;
+    width: 24px;
+}
+
+@media screen and (max-width: 425px) {
+
     .logo-big {
+        display: none;
+    }
+
+    .nav-icon-text {
         display: none;
     }
 }
 
-@media screen and (min-width: 321px) {
+@media screen and (min-width: 426px) {
 
     .logo-small {
         display: none;
     }
+
+    nav {
+        align-items: flex-start;
+    }
+
+    .nav-icon {
+        margin-right: 10px;
+    }
+
+    .nav-btn {
+        margin-left: 20px;
+    }
 }
+
+/* @media screen and (min-width: 769px) {
+
+    .logo-big svg {
+        height: 40px;
+    }
+} */
