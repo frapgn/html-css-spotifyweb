@@ -228,7 +228,6 @@ nav a:hover {
 
 /* MAIN */
 main {
-
     float: left;
     background-color: #121212;
     height: 100vh;
@@ -248,11 +247,16 @@ main {
     flex-direction: column;
     align-items: center;
     margin: 10px;
+    flex: 1 1 100px;
+}
+
+.cover {
+
 }
 
 .cover img {
     border-radius: 3px;
-    overflow: hidden;
+    width: 100%;
 }
 
 .description {
@@ -298,7 +302,7 @@ main {
 
 }
 
-/* Tablet and Computer */
+/* Tablet and Monitor */
 @media screen and (min-width: 426px) {
 
     /* navbar */
@@ -329,11 +333,24 @@ main {
         width: calc(100vw - 230px);
     }
 
+    .album {
+        flex: 1 1 100px;
+    }
+
 }
 
-/* @media screen and (min-width: 769px) {
+/* SOLO Monitor */
+@media screen and (min-width: 769px) {
 
-    .logo-big svg {
-        height: 40px;
+    .album {
+        flex: 1 1 150px;
     }
-} */
+}
+
+/* SOLO Monitor L */
+@media screen and (min-width: 1025px) {
+
+    .album {
+        flex: 1 1 200px;
+    }
+}
