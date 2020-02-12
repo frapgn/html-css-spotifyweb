@@ -206,6 +206,7 @@ nav a:hover {
     width: calc(100% - 50px);
     /* flex: 1 1 calc(100% - 230px); */
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .top-bar a {
@@ -242,6 +243,49 @@ main {
     flex-wrap: wrap;
 }
 
+/* main menu */
+.main-menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-menu li {
+    margin: 20px;
+
+}
+
+.main-menu a {
+    position: relative;
+    padding-bottom: 7px;
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.underline-effect {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1db954;
+    height: 2px;
+    width: 0px;
+    transition: 0.3s;
+}
+
+.main-menu a:hover .underline-effect {
+    width: 80%;
+    /* transform: scaleX(); */
+}
+
+/* album */
 .album {
     display: flex;
     flex-direction: column;
@@ -307,6 +351,9 @@ main {
 .artist:hover {
     color: #1db954;
 }
+
+
+
 /* PLAYER BAR */
 .player-bar {
     position: fixed;
