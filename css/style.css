@@ -251,12 +251,40 @@ main {
 }
 
 .cover {
-
+    position: relative;
+    line-height: 0;
 }
 
 .cover img {
     border-radius: 3px;
     width: 100%;
+}
+
+.cover-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 40px;
+    color: #fff;
+}
+
+.overlay-cover {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.cover:hover .overlay-cover,
+.cover:hover .cover-icon {
+    display: block;
 }
 
 .description {
