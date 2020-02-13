@@ -471,11 +471,11 @@ main {
 }
 
 /* player bar right */
-.pb-right {
+/* .pb-right {
     display: none;
-}
+} */
 
-.m-pb-right {
+.pb-right {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -484,11 +484,11 @@ main {
     /* border: 1px solid white; */
 }
 
-.top-buttons {
+.pb-r-buttons {
     display: flex;
     justify-content: space-around;
 }
-.top-buttons a {
+.pb-r-buttons a {
     color: #fff;
     text-decoration: none;
 }
@@ -501,18 +501,20 @@ main {
 .volume-icon {
     color: #fff;
     padding-right: 5px;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .volume-bar {
     background-color: #404040;
-    height: 3px;
+    height: 4px;
     width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .volume-level {
     background-color: #b3b3b3;
-    height: 3px;
+    height: 4px;
     width: 80%;
 }
 
@@ -681,11 +683,28 @@ main {
     }
 
     .pb-right {
-        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
         flex: 0 1 220px;
         height: 100%;
-        border: 1px solid white;
     }
+
+    .pb-r-buttons {
+        justify-content: space-between;
+        flex: 0 1 22%;
+    }
+
+    .volume-container {
+        padding-left: 15px;
+        flex: 0 2 78%;
+    }
+
+    .volume-icon {
+        font-size: 15px;
+    }
+
+
 }
 
 /* SOLO Monitor L */
