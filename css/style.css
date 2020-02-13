@@ -34,6 +34,11 @@ body {
     width: 100vw;
 }
 
+a:active, a:focus {
+  outline: none;
+  -moz-outline-style: none;
+}
+
 /* NAVBAR */
 nav {
     background-color: #000;
@@ -198,31 +203,32 @@ nav a:hover {
 /* TOP BAR */
 .top-bar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     position: fixed;
     top: 0;
     padding: 0 20px;
-    height: 80px;
+    height: 50px;
     width: calc(100% - 50px);
     /* flex: 1 1 calc(100% - 230px); */
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
-.top-bar a {
+.top-bar .btn-upgrade {
     font-weight: 600;
     font-size: 13px;
     /* margin: 0 20px; */
     padding: 7px 25px;
     color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
     border: 1px solid #fff;
     border-radius: 50px;
     transition: 0.1s;
 }
 
-.top-bar a:hover {
+.top-bar .btn-upgrade:hover {
     transform: scale(1.05);
     color: #1db954;
     border-color: #1db954;
@@ -238,7 +244,7 @@ main {
 }
 
 .main-container {
-    padding-top: 80px;
+    padding-top: 50px;
     padding-bottom: 90px;
     display: flex;
     flex-wrap: wrap;
@@ -471,9 +477,43 @@ main {
 
 .m-pb-right {
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     flex: 1 0 25%;
     height: 100%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+}
+
+.top-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+.top-buttons a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+}
+
+.volume-icon {
+    color: #fff;
+    padding-right: 5px;
+    font-size: 10px;
+}
+
+.volume-bar {
+    background-color: #404040;
+    height: 3px;
+    width: 100%;
+}
+
+.volume-level {
+    background-color: #b3b3b3;
+    height: 3px;
+    width: 80%;
 }
 
 /* up to Smartphone Large */
@@ -511,7 +551,12 @@ main {
         margin-right: 10px;
     }
 
+    .main-container {
+        padding-top: 80px;
+    }
+
     .top-bar {
+        height: 80px;
         width: calc(100% - 230px);
     }
 
@@ -529,6 +574,12 @@ main {
 /* SOLO Monitor */
 @media screen and (min-width: 769px) {
 
+    /* TOP BAR */
+    .top-bar {
+        justify-content: flex-end;
+    }
+
+    /* MAIN */
     .album {
         flex: 1 1 150px;
     }
