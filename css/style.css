@@ -19,11 +19,11 @@
 @font-face {
     font-family: Gotham;
     src: url('../fonts/GothamMedium.ttf');
-    font-weight: 600;
+    font-weight: 700;
 }
 
 body {
-    font-family: Gotham;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
 
@@ -49,7 +49,8 @@ nav {
     justify-content: space-between;
     /* float: left; */
     height: calc(100% - 90px); /* ??? */
-    font-weight: 600;
+    font-weight: 700;
+    overflow: auto;
 }
 
 nav a {
@@ -216,7 +217,7 @@ nav a:hover {
 }
 
 .top-bar .btn-upgrade {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 13px;
     /* margin: 0 20px; */
     padding: 7px 25px;
@@ -275,7 +276,7 @@ main {
     text-decoration: none;
     color: #b3b3b3;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .underline-effect {
@@ -347,7 +348,7 @@ main {
 
 .title {
     color: #fff;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .artist {
@@ -414,7 +415,7 @@ main {
 
 .m-song-description a {
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .m-song-title {
@@ -499,7 +500,7 @@ main {
 .total-time {
     color: #b3b3b3;
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .current-time {
@@ -677,7 +678,7 @@ main {
     .song-description a {
         text-decoration: none;
         padding-right: 12px;
-        font-weight: 600;
+        font-weight: 700;
     }
 
     .song-title {
