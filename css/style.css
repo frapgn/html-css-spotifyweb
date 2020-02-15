@@ -41,16 +41,17 @@ a:active, a:focus {
 
 /* NAVBAR */
 nav {
-    background-color: #000;
+    /* background-color: #000; */
+    background-color: rgb(20, 20, 20);
     color: #b3b3b3;
     display: flex;
     flex: 0 0 50px;
     flex-direction: column;
     justify-content: space-between;
     /* float: left; */
-    height: calc(100% - 90px); /* ??? */
+    height: calc(100vh - 90px); /* ??? */
     font-weight: 700;
-    overflow: auto;
+    /* overflow-y: hidden; */
 }
 
 nav a {
@@ -66,6 +67,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 0 1 auto;
 }
 
 /* logo */
@@ -115,6 +117,50 @@ nav a:hover {
 }
 
 /* navbar playlist */
+.nav-playlist-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1;
+}
+
+.playlist-items-background-gradient {
+    position: relative;
+    flex: 0 1 100px;
+    display: flex;
+    flex-direction: column;
+    /*
+
+    overflow-y: auto;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(29,185,84,0.2) 5%, rgba(29,185,84,0.2) 95%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(20, 20, 20) 5%, rgb(20, 20, 20) 95%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(180deg, rgb(20, 20, 20) 0%, rgb(0, 0, 0) 15%, rgb(0, 0, 0) 85%, rgb(20, 20, 20) 100%); */
+}
+
+.playlist-items-overlay-gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0);
+    background: linear-gradient(180deg, rgb(20, 20, 20) 0%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 85%, rgb(20, 20, 20) 100%);
+
+}
+.playlist-items-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 100px;
+    overflow-y: scroll;
+    width: 100%;
+    padding: 0 5px;
+    scrollbar-color: dark;
+    -webkit-scrollbar-color: dark;
+}
+
 .nav-playlist-container a {
     text-decoration: none;
     color: #b3b3b3;
@@ -129,6 +175,8 @@ nav a:hover {
 .btn-create-playlist {
     display: flex;
     align-items: center;
+    margin-bottom: 15px;
+    margin-left: 5px;
 }
 
 .btn-create-playlist:hover .square-playlist {
@@ -154,12 +202,69 @@ nav a:hover {
     font-size: 15px;
 }
 
+/* playlist item */
+.playlist-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.playlist-item:hover .playlist-item-text {
+    color: #fff;
+}
+
+.cover-playlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-color: #b3b3b3;
+    transition: 0.2s linear;
+    position: relative;
+}
+
+.cover-playlist img {
+    border-radius: 3px;
+    width: 100%;
+}
+
+.cover-playlist-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 15px;
+    color: #fff;
+}
+
+.playlist-item:hover .cover-playlist-icon {
+    display: block;
+}
+
+.overlay-cover-playlist {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.playlist-item:hover .overlay-cover-playlist {
+    display: block;
+}
+
 /* NAVBAR FOOTER */
 .nav-footer {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     width: 100%;
+    flex: 0 0 72px;
 }
 
 .nav-footer a {
@@ -238,7 +343,7 @@ nav a:hover {
 /* MAIN */
 main {
     float: left;
-    background-color: #121212;
+    background-color: #2b2b2b;
     height: 100vh;
     width: calc(100vw - 50px);
     overflow: auto;
@@ -593,6 +698,7 @@ main {
 
     .nav-header {
         align-items: flex-start;
+        width: 100%;
     }
     /* logo */
     .logo-small {
