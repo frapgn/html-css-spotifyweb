@@ -670,14 +670,15 @@ main {
     }
 
     .song-description {
-        display: flex;
-        flex-direction: column;
+        /* display: flex; */
+        /* flex-direction: column; */
         flex: 1 0 80px;
+        padding-right: 12px;
     }
 
     .song-description a {
+        display: inline-block;
         text-decoration: none;
-        padding-right: 12px;
         font-weight: 700;
     }
 
