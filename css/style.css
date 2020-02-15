@@ -25,6 +25,7 @@
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
+    scrollbar-color: #18aa4b #b3b3b3;
 }
 
 .container {
@@ -39,6 +40,29 @@ a:active, a:focus {
   -moz-outline-style: none;
 }
 
+/* WEBKIT SCROLLBARR */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1db954;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0e7432;
+}
+
 /* NAVBAR */
 nav {
     /* background-color: #000; */
@@ -51,7 +75,7 @@ nav {
     /* float: left; */
     height: calc(100vh - 90px); /* ??? */
     font-weight: 700;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
 }
 
 nav a {
@@ -93,7 +117,7 @@ nav a:hover {
 .nav-btns-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .nav-btns-container a {
@@ -126,7 +150,7 @@ nav a:hover {
 
 .playlist-items-background-gradient {
     position: relative;
-    flex: 0 1 100px;
+    flex: 0 1 150px;
     display: flex;
     flex-direction: column;
     /*
@@ -153,12 +177,11 @@ nav a:hover {
     position: relative;
     display: flex;
     flex-direction: column;
-    flex: 0 1 100px;
+    flex: 0 1 150px;
     overflow-y: scroll;
     width: 100%;
     padding: 0 5px;
-    scrollbar-color: dark;
-    -webkit-scrollbar-color: dark;
+    scrollbar-width: thin;
 }
 
 .nav-playlist-container a {
@@ -347,6 +370,7 @@ main {
     height: 100vh;
     width: calc(100vw - 50px);
     overflow: auto;
+    scrollbar-width: thin;
 }
 
 .main-container {
@@ -706,10 +730,14 @@ main {
     }
 
     /* navbar buttons */
+    .nav-btn {
+        margin: 5px 0;
+    }
     .nav-icon {
         margin-right: 10px;
     }
 
+    /* main */
     .main-container {
         padding-top: 80px;
     }
