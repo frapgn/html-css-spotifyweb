@@ -490,9 +490,9 @@ main {
 }
 
 @keyframes greenpulse {
-    0% {color: #fff; transform: rotate(0deg);}
-    50% {color: #1db954;}
-    100% {color: #fff; transform: rotate(360deg)}
+    0% {color: #fff; transform: scale(1);}
+    50% {color: #1db954; transform: scale(1.2);}
+    100% {color: #fff; transform: scale(1);}
 }
 
 .description {
@@ -610,6 +610,10 @@ main {
     line-height: 0px;
 }
 
+.m-pb-icons a:focus {
+    color: #fff;
+}
+
 /* player bar center */
 .pb-center {
     display: flex;
@@ -632,10 +636,14 @@ main {
     flex: 0 2 200px;
 }
 
-.player-buttons a:not(:nth-child(3)) {
+.player-btn:not(:nth-child(3)) {
     color: #b3b3b3;
     text-decoration: none;
     /* padding: 10px; */
+}
+
+.player-btn:hover {
+    color: #fff;
 }
 
 .play-circle {
@@ -645,7 +653,7 @@ main {
     text-decoration: none;
 }
 
-.play-bar-container {
+.progress-bar-container {
     display: flex;
     align-items: center;
 }
@@ -665,7 +673,15 @@ main {
     padding-left: 10px;
 }
 
-.play-bar {
+.progress-bar-wrapper {
+    display: flex;
+    align-items: center;
+    height: 13px;
+    position: relative;
+    width: 100%;
+}
+
+.progress-bar-bg {
     background-color: #404040;
     height: 4px;
     width: 100%;
@@ -673,10 +689,32 @@ main {
     overflow: hidden;
 }
 
-.play-flow {
+.progress-bar {
     background-color: #b3b3b3;
     height: 4px;
     width: 80%;
+}
+
+.progress-bar-wrapper:hover .progress-bar {
+    display: block;
+    background-color: #1db954;
+}
+
+.progress-bar-wrapper:hover .progress-bar-point {
+    display: block;
+}
+
+.progress-bar-point {
+    display: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    left: 78%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
 }
 
 /* player bar right */
@@ -693,9 +731,14 @@ main {
     display: flex;
     justify-content: space-around;
 }
+
 .pb-r-buttons a {
     color: #b3b3b3;
     text-decoration: none;
+}
+
+.pb-r-buttons a:hover {
+    color: #fff;
 }
 
 .volume-container {
@@ -874,6 +917,10 @@ main {
     .pb-icons a {
         text-decoration: none;
         color: #b3b3b3;
+    }
+
+    .pb-icons a:hover {
+        color: #fff;
     }
 
     /* player bar center */
