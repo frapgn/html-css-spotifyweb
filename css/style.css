@@ -131,6 +131,11 @@ nav a:hover {
     margin: 10px 0;
 }
 
+.nav-btn.active,
+.nav-btn:hover {
+    color: #1db954;
+}
+
 .nav-icon {
     height: 24px;
     width: 24px;
@@ -263,10 +268,6 @@ nav a:hover {
     color: #fff;
 }
 
-.playlist-item:hover .cover-playlist-icon {
-    display: block;
-}
-
 .overlay-cover-playlist {
     position: absolute;
     top: 0;
@@ -277,8 +278,15 @@ nav a:hover {
     display: none;
 }
 
-.playlist-item:hover .overlay-cover-playlist {
+.playlist-item:hover .cover-playlist-icon,
+.playlist-item:hover .overlay-cover-playlist,
+.playlist-item.song-active .cover-playlist-icon,
+.playlist-item.song-active .overlay-cover-playlist {
     display: block;
+}
+
+.playlist-item.song-active .playlist-item-text {
+    color: #1db954;
 }
 
 /* NAVBAR FOOTER */
@@ -435,6 +443,9 @@ main {
 
 .cover {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     line-height: 0;
 }
 
@@ -446,9 +457,9 @@ main {
 .cover-icon {
     display: none;
     position: absolute;
-    top: 50%;
+    /* top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); */
     font-size: 40px;
     color: #fff;
 }
@@ -462,12 +473,26 @@ main {
     left: 0;
     border-radius: 3px;
     background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(29, 185, 84, 0.2); */
 
 }
 
 .cover:hover .overlay-cover,
-.cover:hover .cover-icon {
+.cover:hover .cover-icon,
+.cover.cover-active .overlay-cover,
+.cover.cover-active .cover-icon {
     display: block;
+}
+
+.cover.cover-active .cover-icon {
+    animation: greenpulse 3s infinite linear;
+    /* animation: playrotation 3s infinite linear; */
+}
+
+@keyframes greenpulse {
+    0% {color: #fff; transform: rotate(0deg);}
+    50% {color: #1db954;}
+    100% {color: #fff; transform: rotate(360deg)}
 }
 
 .description {
@@ -733,6 +758,7 @@ main {
     .nav-btn {
         margin: 5px 0;
     }
+
     .nav-icon {
         margin-right: 10px;
     }
