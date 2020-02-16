@@ -407,7 +407,7 @@ main {
     margin: 10px;
 }
 
-.main-menu a {
+.main-menu-item {
     position: relative;
     padding-bottom: 7px;
     text-decoration: none;
@@ -427,9 +427,12 @@ main {
     transition: 0.3s;
 }
 
-.main-menu a:hover .underline-effect {
+.main-menu-item:hover .underline-effect {
     width: 80%;
-    /* transform: scaleX(); */
+}
+
+.main-menu-item.active .underline-effect {
+    width: 80%;
 }
 
 /* albums */
